@@ -1,0 +1,16 @@
+{
+  "name": "orca-gondolin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Gondolin sandbox lifecycle adapter for Orca",
+  "engines": { "node": ">=22.19.0" },
+  "scripts": {
+    "test": "node --test",
+    "build": "node scripts/build.mjs",
+    "install-adapter": "node scripts/install.mjs"
+  },
+  "dependencies": {
+    "@earendil-works/gondolin": "0.14.0"
+  }
+}

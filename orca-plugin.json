@@ -1,0 +1,24 @@
+{
+  "manifestVersion": 2,
+  "id": "gondolin-sandboxes",
+  "publisher": "local",
+  "name": "Gondolin Sandboxes",
+  "version": "0.1.0",
+  "execution": "trusted-worker",
+  "pluginApi": 1,
+  "main": "worker/main.mjs",
+  "description": "Disposable local Gondolin micro-VMs with an exact committed checkout and SSH access.",
+  "license": "MIT",
+  "engines": { "orca": ">=1.4.246" },
+  "contributes": {
+    "vmRecipes": [{ "path": "recipes/gondolin.json" }],
+    "panels": [{
+      "id": "settings",
+      "title": "Gondolin Settings",
+      "icon": "settings",
+      "entry": "ui/settings.tsx",
+      "ui": "components"
+    }]
+  },
+  "capabilities": []
+}

@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "id": "gondolin",
+  "name": "Gondolin Sandbox",
+  "description": "Local disposable micro-VM: 2 CPUs, 4 GiB RAM, 20 GiB writable root disk. Copies the requested committed state; no host mounts or credential forwarding. Includes the adapter; click Prepare Runtime in Gondolin Settings once after installation. Requires host Git, OpenSSH tools and QEMU.",
+  "checkoutMode": "provisioned-root",
+  "create": "test -x \"$HOME/.local/share/orca-gondolin/bin/orca-gondolin\" || { printf '%s\\n' 'Gondolin runtime is not prepared. Open Gondolin Settings and click Prepare Runtime.' >&2; exit 1; }; \"$HOME/.local/share/orca-gondolin/bin/orca-gondolin\" create",
+  "destroy": "test -x \"$HOME/.local/share/orca-gondolin/bin/orca-gondolin\" || { printf '%s\\n' 'Gondolin runtime is not prepared. Open Gondolin Settings and click Prepare Runtime before retrying destroy.' >&2; exit 1; }; \"$HOME/.local/share/orca-gondolin/bin/orca-gondolin\" destroy"
+}
